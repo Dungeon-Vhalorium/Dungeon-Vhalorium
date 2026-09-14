@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dungeon Vhalorium™ | Cytronyx Games</title>
-<meta name="description" content="Dungeon Vhalorium™ - 8 worlds by Cytronyx Games">
+<meta name="description" content="Dungeon Vhalorium™ - 9 worlds by Cytronyx Games">
 <meta property="og:image" content="logo.png">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -11,91 +11,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{background:#070d0a;color:#d6e8d6;font-family:'Inter',sans-serif;line-height:1.7}
-nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:rgba(7,13,10,0.9);border-bottom:1px solid rgba(92,255,160,0.15)}
-nav .logo{display:flex;align-items:center;gap:12px}nav .logo img{width:42px;height:42px;border-radius:50%;border:2px solid #f5d76e}nav .logo span{font-family:'Cinzel',serif;font-weight:700;color:#f5d76e}
-.hero{height:95vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:#000;overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.4)}
-.hero-content{position:relative;z-index:2}
-.crystal-icon{width:170px;height:170px;margin:0 auto 24px;border-radius:50%;border:3px solid #f5d76e;overflow:hidden}
-.crystal-icon img{width:100%;height:100%;object-fit:cover}
-.hero-content h1{font-family:'Cinzel Decorative',serif;font-size:72px;color:#f5d76e}
-.section{max-width:1150px;margin:0 auto;padding:90px 24px}
-.game-card{background:#0f1f16;border:1px solid rgba(92,255,160,0.15);border-radius:16px;overflow:hidden;margin-top:45px}
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:rgba(7,13,10,0.95);border-bottom:1px solid rgba(92,255,160,0.15)}
+nav .logo{display:flex;align-items:center;gap:12px}nav .logo img{width:42px;height:42px;border-radius:50%;border:2px solid #f5d76e;object-fit:cover}nav .logo span{font-family:'Cinzel',serif;font-weight:700;color:#f5d76e}
+.hero{height:90vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:#000;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.35)}
+.hero-content{position:relative;z-index:2}.crystal-icon{width:170px;height:170px;margin:0 auto 24px;border-radius:50%;border:3px solid #f5d76e;box-shadow:0 0 50px rgba(92,255,160,0.4);overflow:hidden}.crystal-icon img{width:100%;height:100%;object-fit:cover}
+.hero-content h1{font-family:'Cinzel Decorative',serif;font-size:68px;color:#f5d76e}
+.section{max-width:1150px;margin:0 auto;padding:80px 24px}
+.game-card{background:#0f1f16;border:1px solid rgba(92,255,160,0.15);border-radius:16px;overflow:hidden;margin-top:40px}
 .game-head{display:grid;grid-template-columns:400px 1fr}
-.game-img{min-height:420px;background:#0d1a12;position:relative;overflow:hidden}
-.game-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card-body{padding:34px}
-.label{font-family:'Cinzel',serif;color:#5cffa0;letter-spacing:4px;font-size:12px;margin-bottom:10px}
-h2{font-family:'Cinzel',serif;font-size:32px;color:#f5d76e}
-.divider{height:1px;background:linear-gradient(90deg, transparent, rgba(92,255,160,0.3), transparent);margin:60px 0}
-.play-btn{display:inline-block;margin-top:18px;background:#5cffa0;color:#000;padding:12px 28px;border-radius:6px;font-weight:800}
-.play-btn.gold{background:linear-gradient(135deg,#f5d76e,#d4b44a)}
-@media(max-width:950px){.game-head{grid-template-columns:1fr}.hero-content h1{font-size:40px}.game-img{min-height:260px}}
+.game-img{min-height:420px;background:#0d1a12;position:relative;overflow:hidden}.game-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card-body{padding:30px}.label{font-family:'Cinzel',serif;color:#5cffa0;letter-spacing:4px;font-size:11px;margin-bottom:8px}h2{font-family:'Cinzel',serif;font-size:32px;color:#f5d76e;margin-bottom:8px}
+.divider{height:1px;background:linear-gradient(90deg, transparent, rgba(92,255,160,0.3), transparent);margin:50px 0}
+.play-btn{display:inline-block;margin-top:16px;background:#5cffa0;color:#000;padding:12px 26px;border-radius:6px;font-weight:800;font-size:13px}.play-btn.gold{background:linear-gradient(135deg,#f5d76e,#d4b44a)}
+@media(max-width:950px){.game-head{grid-template-columns:1fr}.hero-content h1{font-size:36px}.game-img{min-height:250px}}
 </style>
 </head>
 <body>
-<nav><div class="logo"><img src="logo.png"><span>DUNGEON VHALORIUM</span></div></nav>
+<nav><div class="logo"><img src="logo.png" alt="logo"><span>DUNGEON VHALORIUM</span></div></nav>
 <div class="hero"><img class="hero-bg" src="logo.png"><div class="hero-content"><div class="crystal-icon"><img src="logo.png"></div><h1>DUNGEON VHALORIUM</h1></div></div>
 <div class="section">
 
-<div class="label">1. ORIGIN</div><h2>Enter the Abyss </h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="origin.jpg" alt="origin"></div><div class="card-body"><h3> The latest project from cytronyx is a challenging, environment-driven dungeon crawler built in Core. Explore the treacherous depths beyond the Emerald Gate and face fearsome creatures </h3><a class="play-btn gold" href="https://www.coregames.com/games/3a4d1a/dungeon-land" target="_blank">PLAY ORIGIN</a></div></div></div>
+<div class="label">1. THE ABYSS</div><h2>Dungeon Vhalorium</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="origin.jpg"></div><div class="card-body"><h3>The latest project from cytronyx is a challenging, environment-driven dungeon crawler built in Core. Explore the treacherous depths beyond the Emerald Gate and face fearsome creatures</h3><a class="play-btn gold" href="https://www.coregames.com/games/3a4d1a/dungeon-land" target="_blank">PLAY NOW</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">2. EXPANSION</div><h2>Emerald Gate</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="emerald-gate.jpg"></div><div class="card-body"><h3> Dungeon Vhalorium™ - Emerald Gate is a massive expansion on the original dark fantasy adventure, offering players a deeper, more dangerous world to explore. This installment focuses on non-linear progression, enhanced crafting systems, and the looming threat of the Obsidian Heart, a force threatening to corrupt the entire Vhalorium complex.
-Expanded World: The total playable area is 150% larger than the first Dungeon Vhalorium, featuring three new biomes: the Crystalline Depths, the Forgotten Clockwork, and the Ashen Catacombs.
-Weapon Fusion & Runes: Introducing a robust Runecrafting System. Players can now fuse two existing weapons to create powerful Legendary variants and socket them with rare runes, providing unique, build-defining bonuses.
-The primary antagonist is not a single boss, but the Obsidian Heart itself—a spreading corruption that dynamically changes the layout and enemy types of explored areas, ensuring no two playthroughs are exactly alike.
-Face new strategic challenges with the introduction of Shadow Weavers (ranged casters) and Goliath Constructs (slow, heavily armored tanks requiring environmental manipulation to defeat).
-Entry Paths: Seamless Progression </h3><a class="play-btn gold" href="https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate" target="_blank">PLAY</a></div></div></div>
+<div class="label">2. THE EXPANSION</div><h2>Emerald Gate</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="emerald-gate.jpg"></div><div class="card-body"><h3>Dungeon Vhalorium™ - Emerald Gate is a massive expansion - 150% larger, Weapon Fusion & Runes, Obsidian Heart corruption, Shadow Weavers and Goliath Constructs.</h3><a class="play-btn gold" href="https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate" target="_blank">PLAY EMERALD GATE</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">3. HORROR</div><h2>Ghost Villa</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="ghost-villa.jpg"></div><div class="card-body"><h3> Experience a high-stakes survival horror challenge where the rules of combat are rewritten. In "Ghost Villa," you face a relentless onslaught of zombies and skeletons within a haunted, atmospheric Halloween landscape. </h3><a class="play-btn" href="https://www.coregames.com/games/656dd7/dungeon-vhalorium-ghost-villa" target="_blank">ENTER VILLA</a></div></div></div>
+<div class="label">3. THE HORROR</div><h2>Ghost Villa</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="ghost-villa.jpg"></div><div class="card-body"><h3>Experience high-stakes survival horror where combat rules are rewritten. Relentless zombies and skeletons in haunted Halloween landscape.</h3><a class="play-btn" href="https://www.coregames.com/games/6566d7/dungeon-vhalorium-ghost-villa" target="_blank">ENTER VILLA</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">4. SANCTUARY</div><h2>Blossom Path</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="blossom-path.jpg"></div><div class="card-body"><h3>  Dungeon Vhalorium: Blossom Path is the peaceful heart of the Vhalorium universe a "Place of Memories" where the battle stops and the story begins.
-
-Unlike the dark corridors of Ghost Villa, the Blossom Path is a sanctuary filled with cherry blossoms, emotional figures, and hidden lore. It serves as the ultimate Bridge, containing ancient portals that allow you to teleport seamlessly between every world in the Dungeon Vhalorium series.
-
-The Bridge: A central hub connecting all current and future Vhalorium games.
-The Sanctuary: A strictly "No-Battle" zone designed for peaceful exploration and reflection.
-
-The Memories: Discover emotional scenes and statues that reveal the deeper history of the world.
-
-Experience a world of harmony, light, and beauty before stepping back into the shadows.  </h3><a class="play-btn" href="https://www.coregames.com/games/a1bd6b/dungeon-vhalorium-blossom-path" target="_blank">WALK THE PATH</a></div></div></div>
+<div class="label">4. THE SANCTUARY</div><h2>Blossom Path</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="blossom-path.jpg"></div><div class="card-body"><h3>Blossom Path is the peaceful heart - Place of Memories. No-Battle sanctuary, cherry blossoms, portals connecting all Vhalorium worlds.</h3><a class="play-btn" href="https://www.coregames.com/games/6cfabb/dungeon-vhaloriumblossom-gate" target="_blank">WALK THE PATH</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">5. NEW ERA</div><h2>Crimson Rift</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="crimson-rift.jpg"></div><div class="card-body"><h3> The Crimson Rift has opened. Once a thriving kingdom connected to the Ezel realm, this land has been reduced to ashes and flowing magma. The people are gone, and a thick mystery hangs in the soot-filled air.</h3><p>The Grave of a Kingdom - magma & ash.</p><img src="crimson-boss.jpg" style="width:100%;border-radius:8px;margin-top:12px;position:relative"><br><a class="play-btn gold" href="https://www.coregames.com/games/5f9a1c/dungeon-vhalorium-crimson-rift" target="_blank">PLAY CRIMSON RIFT</a></div></div></div>
+<div class="label">5. NEW ERA - LEGEND OF ASHES</div><h2>Crimson Rift</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="crimson-rift.jpg"></div><div class="card-body"><h3>The Crimson Rift has opened. Once thriving kingdom reduced to ashes and magma.</h3><img src="crimson-boss.jpg" style="width:100%;border-radius:8px;margin-top:12px;position:relative"><br><a class="play-btn gold" href="https://www.coregames.com/games/e46890/dungeonvhalorium-crimsonrift" target="_blank">PLAY CRIMSON RIFT</a></div></div></div>
 <div class="divider"></div>
 
 <div class="label">6. KINGDOM OF STONES</div><h2>Bone & Stones</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="bone-stones.jpg"></div><div class="card-body"><h3> In this new story-driven chapter of the Dungeon Vhalorium saga, you are the only living heartbeat in a world made of rock and bone. Explore the ruins of a massive city where ancient Golems stand guard and skeleton hordes roam the shadows. </h3><img src="bone-stones-2.jpg" style="width:100%;border-radius:8px;margin-top:12px;position:relative"><br><a class="play-btn" href="#">PLAY</a></div></div></div>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="bone-stones.jpg"></div><div class="card-body"><h3>Only living heartbeat in world of rock and bone. Massive city, Golems, skeleton hordes.</h3><img src="bone-stones-2.jpg" style="width:100%;border-radius:8px;margin-top:12px;position:relative"><br><a class="play-btn" href="https://www.coregames.com/games/9864ac/dungeon-vhalorium-bonestones" target="_blank">PLAY BONE & STONES</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">7. LOGIC RUNNER</div><h2>Tactical Run</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="tactical-run.jpg"></div><div class="card-body"><h3> Welcome to a brutal new challenge in the Dungeon Vhalorium™ universe. This isn't just another brainless runner...this is a high-stakes tactical mind game built by Cytronyx to completely break your focus.
-
-The rules seem simple on paper, but the environment is working entirely against you. A relentless day and night cycle flips every single minute, completely resetting your visibility and forcing you to readapt on the fly. To make things worse, aggressive enemies and tricky teleportation loops are specifically placed to disorient you and trap you in endless puzzles.
-
-You will need serious logic, environmental analysis, and split-second decisions to break the loop and escape. Look closely at the layout, time your runs, and don't panic. One wrong step, and it's over. </h3><a class="play-btn" href="https://www.coregames.com/games/88b9c2/dungeon-vhalorium-tactical-run" target="_blank">PLAY</a></div></div></div>
+<div class="label">7. THE TRUE ORIGIN</div><h2>Dungeon Vhalorium - Origins</h2>
+<div class="game-card" style="border-color:rgba(245,215,110,0.3)"><div class="game-head"><div class="game-img"><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#0a1a0f;color:#5cffa0;font-family:'Cinzel',serif">ORIGINS - IMAGE COMING SOON</div></div><div class="card-body"><h3>Dungeon Vhalorium - Origins</h3><p style="opacity:0.8">The true beginning. Before the Abyss. The first story of Vhalorium.</p><a class="play-btn gold" href="https://www.coregames.com/games/3cc445/helloworld1" target="_blank">PLAY ORIGINS</a></div></div></div>
 <div class="divider"></div>
 
-<div class="label">8. MOST BRUTAL</div><h2>World_Necro</h2>
-<div class="game-card"><div class="game-head"><div class="game-img"><img src="necro-world.jpg"></div><div class="card-body"><h3> This game is brutal, and it is very difficult for people to play. It is more than just a game. The game takes place in a necro-world built by Dungeon Vhalorium, where people who have committed sins and terrible crimes are punished by the Gate Entity. You are entering and watching one of Dungeon Vhalorium’s sinister and awful reality worlds, where no mercy will be given. You are inside a world built by the Entity for the punishment of your crimes. This world has no escape; all you can do is run. The Necro will hunt you and tear your soul, spirit, and body apart. You are immortal here; you will face punishments worse than death. No human soul can handle this, yet the Lord of this world heals your soul so you will go through every awful punishment until the Lord is satisfied. In the worst case, the Lord can even control time. This world is his creation, and he can do anything here. The Lord created this world to punish evil demons, gods, and celestial beings. </h3><p>No Escape - Lord controls time.</p><a class="play-btn" style="background:#ff3c3c;color:#fff" href="https://www.coregames.com" target="_blank">ENTER NECRO</a></div></div></div>
+<div class="label">8. LOGIC RUNNER</div><h2>Tactical Run</h2>
+<div class="game-card"><div class="game-head"><div class="game-img"><img src="tactical-run.jpg"></div><div class="card-body"><h3>Tactical Run - Brutal tactical mind game. Day/Night flips every minute, teleport loops, logic + split-second decisions.</h3><a class="play-btn" href="https://www.coregames.com/games/94b520/dungeon-vhalorium-tactical-run" target="_blank">PLAY TACTICAL RUN</a></div></div></div>
+<div class="divider"></div>
+
+<div class="label">9. MOST BRUTAL - NO ESCAPE</div><h2>World_Necro</h2>
+<div class="game-card" style="background:linear-gradient(145deg, #1a1212, #0d0707);border-color:rgba(255,60,60,0.25)"><div class="game-head"><div class="game-img"><img src="necro-world.jpg"></div><div class="card-body"><h3>World_Necro - No Escape. Punishment world, Lord controls time, immortal torment.</h3><a class="play-btn" style="background:#ff3c3c;color:#fff" href="https://www.coregames.com/games/8a7bcb/dungeon-vhalorium-worldnecro" target="_blank">ENTER NECRO</a></div></div></div>
 
 </div>
 
 <div style="text-align:center;padding:80px 24px;background:linear-gradient(180deg, #0a1510, #070d0a);border-top:1px solid rgba(92,255,160,0.2);margin-top:60px">
 <h2 style="font-family:'Cinzel',serif;font-size:36px;color:#f5d76e">Watch Gameplay & Lore</h2>
-<p style="opacity:0.7;max-width:650px;margin:12px auto">Trailers, boss fights, lore and brutal deaths - watch all Dungeon Vhalorium videos on official YouTube.</p>
+<p style="opacity:0.7;max-width:650px;margin:12px auto">Trailers, boss fights, lore and brutal deaths - on official Dungeon Vhalorium YouTube.</p>
 <a href="https://youtube.com/@dungeonvhalorium?si=bU0LSbyruR9a6fzD" target="_blank" style="display:inline-block;background:#FF0000;color:#fff;padding:16px 40px;border-radius:50px;font-weight:900;font-size:18px;margin-top:20px;text-decoration:none;box-shadow:0 0 20px rgba(255,0,0,0.4)">▶ YOUTUBE CHANNEL</a>
 <p style="margin-top:14px;opacity:0.5;font-size:13px">youtube.com/@dungeonvhalorium</p>
 </div>
 
-<footer style="text-align:center;padding:60px;opacity:0.5">© 2026 Cytronyx Games | <a href="https://youtube.com/@dungeonvhalorium?si=bU0LSbyruR9a6fzD" target="_blank" style="color:#FF0000;font-weight:700">YouTube @dungeonvhalorium</a></footer>
+<footer style="text-align:center;padding:60px;opacity:0.5;font-size:12px">© 2026 Cytronyx Games - 9 Worlds | <a href="https://youtube.com/@dungeonvhalorium?si=bU0LSbyruR9a6fzD" target="_blank" style="color:#FF0000;font-weight:700">YouTube @dungeonvhalorium</a></footer>
 </body>
 </html>
