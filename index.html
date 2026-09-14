@@ -3,103 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dungeon Vhalorium™ - Cytronyx Games</title>
+<title>Dungeon Vhalorium™ | Cytronyx Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-:root { --accent: #2a5d84; --accent-dark: #1d435f; }
-body { margin:0; font-family: 'Segoe UI', Roboto, sans-serif; color:#222; background:#fff; line-height:1.6; }
-header { background:#0f2a3a; color:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:10; }
-header a.logo { color:#7CFF7C; font-weight:bold; text-decoration:none; font-size:22px; }
-header a.yt-link { background:#FF0000; color:white; padding:8px 18px; border-radius:20px; text-decoration:none; font-weight:600; }
-.container { max-width:900px; margin:0 auto; padding:20px; }
-.hero-img { width:100%; height:400px; background:#e6eef3; display:flex; align-items:center; justify-content:center; color:#666; font-style:italic; border-radius:8px; }
-h1 { color:var(--accent); font-weight:300; font-size:32px; margin-top:30px; }
-h2 { color:var(--accent); font-weight:400; font-size:22px; margin-top:40px; }
-a.game-link { color:var(--accent); word-break:break-all; font-weight:500; }
-.btn { display:inline-block; background:var(--accent); color:white; padding:10px 22px; border-radius:4px; text-decoration:none; margin:15px 0; }
-.image-placeholder { width:100%; height:300px; background:#f2f5f7; border:1px dashed #9bb0bf; display:flex; align-items:center; justify-content:center; margin:15px 0; border-radius:6px; color:#5a7a8c; font-weight:600; }
-.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.notice-box { background:#f6f8f9; border-left:4px solid var(--accent); padding:15px 18px; margin:20px 0; }
-.copy-box { background:#eef3f5; padding:15px; border-radius:6px; font-size:13px; }
-.section-divider { height:1px; background:#ddd; margin:50px 0; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#070d0a;color:#d6e8d6;font-family:'Inter',sans-serif}
+nav{position:fixed;top:0;width:100%;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:rgba(7,13,10,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(92,255,160,0.15)}
+nav .logo{display:flex;align-items:center;gap:12px}
+nav .logo img{width:42px;height:42px;border-radius:50%;border:2px solid #f5d76e;box-shadow:0 0 15px rgba(245,215,110,0.4)}
+nav .logo span{font-family:'Cinzel',serif;font-weight:700;color:#f5d76e;letter-spacing:1px}
+.yt-btn{background:linear-gradient(135deg,#ff0000,#cc0000);padding:8px 20px;border-radius:30px;font-weight:700;font-size:13px;box-shadow:0 4px 15px rgba(255,0,0,0.3)}
+.hero{height:92vh;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:#000;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.5)}
+.hero-fog{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(92,255,160,0.18) 0%, rgba(7,13,10,0.6) 60%, #070d0a 90%)}
+.hero-content{position:relative;z-index:2;max-width:800px;padding:20px}
+.crystal-icon{width:160px;height:160px;margin:0 auto 20px;border-radius:50%;border:3px solid #f5d76e;box-shadow:0 0 40px rgba(245,215,110,0.6);overflow:hidden}
+.crystal-icon img{width:100%;height:100%;object-fit:cover}
+.hero-content h1{font-family:'Cinzel Decorative',serif;font-size:64px;color:#f5d76e;text-shadow:0 0 20px rgba(245,215,110,0.5);line-height:0.9}
+.hero-content p.sub{font-size:18px;opacity:0.8;margin:18px 0 28px}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta{padding:14px 32px;border-radius:4px;font-weight:700;letter-spacing:1px;font-family:'Cinzel',serif;transition:0.3s}
+.cta-primary{background:linear-gradient(135deg,#f5d76e,#d4b44a);color:#000;box-shadow:0 0 25px rgba(245,215,110,0.5)}
+.cta-secondary{border:1px solid rgba(92,255,160,0.5);color:#5cffa0;background:rgba(92,255,160,0.08)}
+.section{max-width:1100px;margin:0 auto;padding:80px 24px}
+.section-label{font-family:'Cinzel',serif;color:#5cffa0;letter-spacing:4px;font-size:12px;margin-bottom:10px}
+.section h2{font-family:'Cinzel',serif;font-size:38px;color:#f5d76e;margin-bottom:16px}
+.game-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-top:50px}
+.game-card{background:linear-gradient(145deg, #0f1f16, #0a1510);border:1px solid rgba(92,255,160,0.15);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:380px 1fr;transition:0.4s}
+.game-card:hover{border-color:rgba(92,255,160,0.4);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.game-card.reverse{grid-template-columns:1fr 380px}.game-card.reverse .card-img{order:2}
+.game-img{height:100%;min-height:340px;background:#111;display:flex;align-items:center;justify-content:center;color:#5cffa0;font-weight:700}
+.card-body{padding:28px 32px}
+.card-body h3{font-family:'Cinzel',serif;font-size:26px;color:#fff;margin-bottom:6px}
+.card-body h4{font-size:13px;letter-spacing:2px;color:#5cffa0;margin-bottom:14px}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;background:rgba(92,255,160,0.12);border:1px solid rgba(92,255,160,0.25);color:#5cffa0;font-size:11px;margin-right:6px}
+.play-btn{display:inline-block;margin-top:16px;background:#5cffa0;color:#000;padding:10px 22px;border-radius:6px;font-weight:800;font-size:13px}
+.link{color:#5cffa0;font-weight:600;word-break:break-all;font-size:13px}
+.legacy{background:rgba(245,215,110,0.04);border:1px solid rgba(245,215,110,0.15);border-radius:12px;padding:24px;margin:40px 0}
+footer{text-align:center;padding:60px 20px;border-top:1px solid rgba(92,255,160,0.1);opacity:0.6;font-size:12px}
+@media(max-width:900px){.hero-content h1{font-size:38px}.game-card,.game-card.reverse{grid-template-columns:1fr}.game-card.reverse .card-img{order:0}.game-img{min-height:220px}}
 </style>
 </head>
 <body>
-<header>
-<a class="logo" href="#">V</a>
-<a class="yt-link" href="https://www.youtube.com/@cytronyx" target="_blank">▶ YouTube - REPLACE WITH YOUR LINK</a>
-</header>
 
-<div class="container">
+<nav>
+<div class="logo"><img src="logo.jpg" alt="logo"><span>DUNGEON VHALORIUM</span></div>
+<a class="yt-btn" href="https://youtube.com/@dungeonvhalorium?si=eAj2eQ3Bg6a1ONf1" target="_blank">▶ YOUTUBE</a>
+</nav>
 
-<div class="image-placeholder">IMAGE 1 - Main Hero Banner</div>
-
-<h1>Dungeon Vhalorium™</h1>
-<h3>Enter the Abyss</h3>
-<p>"The latest project from cytronyx is a challenging, environment-driven dungeon crawler built in Core."</p>
-<p><strong>PLAY DUNGEON VHALORIUM™ NOW (PC ONLY)</strong><br>
-<a class="game-link" href="https://www.coregames.com/games/3a4d1a/dungeon-land" target="_blank">https://www.coregames.com/games/3a4d1a/dungeon-land</a></p>
-
-<h2>Hello! I'm Cytronyx, the solo developer and designer behind Dungeon Vhalorium™.</h2>
-<p>I am currently a student dedicated to "self-taught mastery" of game development...</p>
-<a class="btn" href="#">Learn About Cytronyx</a>
-
-<div class="image-placeholder">IMAGE 2</div>
-<div class="image-placeholder">IMAGE 3</div>
-<div class="grid-2"><div class="image-placeholder">IMAGE 4</div><div class="image-placeholder">IMAGE 5</div></div>
-<div class="image-placeholder">IMAGE 6</div>
-
-<div class="section-divider"></div>
-
-<h1>Dungeon Vhalorium™ - Emerald Gate</h1>
-<p>Dungeon Vhalorium™ - Emerald Gate is a massive expansion... 150% more playable area...</p>
-<div class="image-placeholder">IMAGE 7 - Purple gate</div>
-<div class="image-placeholder">IMAGE 8 - Skeleton boss</div>
-<div class="image-placeholder">IMAGE 9 - Green boss</div>
-<p><strong>Play Dungeon Vhalorium™ - Emerald Gate Now (PC ONLY)</strong><br>
-<a class="game-link" href="https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate" target="_blank">https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate</a></p>
-
-<div class="section-divider"></div>
-
-<div class="image-placeholder">IMAGE 10 - Ghost Villa banner</div>
-<h1>Dungeon Vhalorium™ - Ghost Villa</h1>
-<p>Status: Published / Available Now<br>Cost: 100% Free-to-Play<br>Platform: Core (PC Required)<br>
-<a class="game-link" href="https://www.coregames.com/games/656dd7/dungeon-vhalorium-ghost-villa">https://www.coregames.com/games/656dd7/dungeon-vhalorium-ghost-villa</a></p>
-<div class="image-placeholder">IMAGE 11 - Spooky tree</div>
-<div class="image-placeholder">IMAGE 12 - Halloween fire pit</div>
-
-<div class="section-divider"></div>
-
-<h1>Dungeon Vhalorium™ - Blossom Path</h1>
-<p>The Journey Begins at the Bridge...</p>
-<p>Status: Published / Available Now<br>Cost: 100% Free-to-Play<br>
-<a class="game-link" href="https://www.coregames.com/games/a1bd6b/dungeon-vhalorium-blossom-path">LINK - Blossom Path</a></p>
-<div class="image-placeholder">IMAGE 13</div>
-<div class="image-placeholder">IMAGE 14</div>
-<div class="image-placeholder">IMAGE 15</div>
-
-<div class="notice-box">
-<h2>Important Update: The Future of Dungeon Vhalorium™</h2>
-<p>Follow the New Saga Here: <a class="game-link" href="https://sites.google.com/view/dungeonvhalorium-newversion/home">https://sites.google.com/view/dungeonvhalorium-newversion/home</a></p>
+<div class="hero">
+<img class="hero-bg" src="logo.jpg" alt="banner">
+<div class="hero-fog"></div>
+<div class="hero-content">
+<div class="crystal-icon"><img src="logo.jpg" alt="crystal"></div>
+<h1>DUNGEON VHALORIUM</h1>
+<p class="sub">Enter the Abyss. A dark fantasy dungeon crawler universe by Cytronyx</p>
+<div class="cta-row">
+<a class="cta cta-primary" href="https://www.coregames.com/games/3a4d1a/dungeon-land" target="_blank">PLAY NOW - PC</a>
+<a class="cta cta-secondary" href="https://youtube.com/@dungeonvhalorium?si=eAj2eQ3Bg6a1ONf1" target="_blank">WATCH TRAILER</a>
+</div>
+</div>
 </div>
 
-<div class="image-placeholder">IMAGE 16 - CRIMSON RIFT banner</div>
-<h1>Dungeon Vhalorium™ - The Crimson Rift</h1>
-<p><a class="game-link" href="https://www.coregames.com/games/5f9a1c/dungeon-vhalorium-crimson-rift">https://www.coregames.com/games/5f9a1c/dungeon-vhalorium-crimson-rift</a></p>
-<a class="btn" href="#">More Details</a>
+<div class="section">
+<div class="section-label">CHAPTER I - THE ORIGIN</div>
+<h2>Enter the Abyss</h2>
+<p>The latest project from Cytronyx is a challenging, environment-driven dungeon crawler built in Core. Solo-developed, atmospheric, brutal.</p>
 
-<div class="section-divider"></div>
-<div class="image-placeholder">IMAGE 17 - BONE & STONES banner</div>
-<h1>Dungeon Vhalorium™ - Bone & Stones</h1>
-<a class="btn" href="#">More Details</a>
+<div class="game-grid">
 
-<div class="section-divider"></div>
-<div class="image-placeholder">IMAGE 18 - TACTICAL RUN banner</div>
-<h1>Dungeon Vhalorium™ - Tactical Run</h1>
-<p><a class="game-link" href="https://www.coregames.com/games/88b9c2/dungeon-vhalorium-tactical-run">https://www.coregames.com/games/88b9c2/dungeon-vhalorium-tactical-run</a></p>
-<div class="image-placeholder">IMAGE 19</div>
-<div class="image-placeholder">IMAGE 20</div>
-
-<p style="text-align:center; color:#888; font-size:12px; margin-top:50px;">© 2025 Cytronyx Games</p>
+<div class="game-card">
+<div class="game-img card-img">IMAGE 1 - EMERALD GATE</div>
+<div class="card-body">
+<h3>Emerald Gate</h3><h4>150% LARGER WORLD • RUNECRAFTING</h4>
+<p>Massive expansion with non-linear biomes: Forgotten Clockwork, Crystalline Depths, Ashen Catacombs. Weapon Fusion & Rune system.</p>
+<span class="badge">PC ONLY</span><span class="badge">FREE TO PLAY</span><br><br>
+<span class="link">https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate</span><br>
+<a class="play-btn" href="https://www.coregames.com/games/a7b240/dungeon-vhalorium-emeraldgate" target="_blank">PLAY EMERALD GATE</a>
 </div>
+</div>
+
+<div class="game-card reverse">
+<div class="game-img card-img">IMAGE 2 - GHOST VILLA</div>
+<div class="card-body">
+<h3>Ghost Villa</h3><h4>THE IMMORTAL RULE • NO COMBAT</h4>
+<p>Enemies are immortal. Your only weapons are speed, strategy, and villa knowledge. Halloween town, dense fog, vehicles.</p>
+<span class="badge">HORROR</span><span class="badge">VILLA</span><br><br>
+<span class="link">https://www.coregames.com/games/656dd7/dungeon-vhalorium-ghost-villa</span><br>
+<a class="play-btn" href="https://www.coregames.com/games/656dd7/dungeon-vhalorium-ghost-villa" target="_blank">ENTER VILLA</a>
+</div>
+</div>
+
+<div class="game-card">
+<div class="game-img card-img">IMAGE 3 - BLOSSOM PATH</div>
+<div class="card-body">
+<h3>Blossom Path</h3><h4>THE NEXUS • NO-BATTLE SANCTUARY</h4>
+<p>Ethereal hub of Vhalorium. Cherry blossoms, Nexus Portals to teleport between worlds. PC & iOS.</p>
+<span class="badge">HUB WORLD</span><span class="badge">PC + iOS</span><br><br>
+<span class="link">https://www.coregames.com/games/a1bd6b/dungeon-vhalorium-blossom-path</span><br>
+<a class="play-btn" href="https://www.coregames.com/games/a1bd6b/dungeon-vhalorium-blossom-path" target="_blank">WALK THE PATH</a>
+</div>
+</div>
+
+</div>
+
+<div class="legacy">
+<h3 style="font-family:'Cinzel',serif;color:#f5d76e">⚠️ Important Update</h3>
+<p style="margin-top:10px">Follow the New Saga: <a href="https://sites.google.com/view/dungeonvhalorium-newversion/home" target="_blank" style="color:#f5d76e;font-weight:700">https://sites.google.com/view/dungeonvhalorium-newversion/home</a></p>
+</div>
+
+<div class="game-grid">
+<div class="game-card"><div class="game-img card-img">IMAGE 4 - CRIMSON RIFT</div><div class="card-body"><h3>The Crimson Rift</h3><h4>LEGEND OF THE ASHES</h4><p>World fallen, ash and magma. Infernal combat.</p><a class="play-btn" href="https://www.coregames.com/games/5f9a1c/dungeon-vhalorium-crimson-rift" target="_blank">PLAY RIFT</a></div></div>
+<div class="game-card reverse"><div class="game-img card-img">IMAGE 5 - BONE & STONES</div><div class="card-body"><h3>Bone & Stones</h3><h4>PRIMAL DESCENT</h4><p>Raw subterranean survival, bone weapons, stone sentinels.</p><a class="play-btn" href="#">PLAY</a></div></div>
+<div class="game-card"><div class="game-img card-img">IMAGE 6 - TACTICAL RUN</div><div class="card-body"><h3>Tactical Run</h3><h4>1 MIN DAY/NIGHT • LOGIC</h4><p>Time shifts every 60s, teleport loops. Break your focus.</p><a class="play-btn" href="https://www.coregames.com/games/88b9c2/dungeon-vhalorium-tactical-run" target="_blank">BEAT THE LOOP</a></div></div>
+</div>
+
+<div style="text-align:center;margin-top:70px">
+<a class="cta cta-secondary" href="https://youtube.com/@dungeonvhalorium?si=eAj2eQ3Bg6a1ONf1" target="_blank">▶ SUBSCRIBE ON YOUTUBE</a>
+</div>
+
+</div>
+<footer>© 2025 Cytronyx Games - Dungeon Vhalorium™ - Free-to-Play on Core</footer>
 </body>
 </html>
